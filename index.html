@@ -8,15 +8,15 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
 
     <link rel="stylesheet" href="assets/css/gallery.css" />
     
     <title>Fitness</title>
 </head>
 
-<body>
+<body onload="myFunction()">
     <header>
         <nav class="navbar navbar-expand-md navbar-light bg-light">
             <div class="container-fluid">
@@ -366,13 +366,12 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="assets/js/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/aos.js"></script>
     <script>
         AOS.init({
             mirror: true,
@@ -381,13 +380,18 @@
         });
     </script>  
 
+    <script>
+        function myFunction() {
+            document.getElementById("default").click();
+        }
+    </script>
+
+
+
+
 
     <script>
         
-
-        $("document").ready(function (){
-            $('#default').click();
-        });
         $('.portfolio-menu ul li').click(function () {
             $('.portfolio-menu ul li').removeClass('active');
             $(this).addClass('active');
